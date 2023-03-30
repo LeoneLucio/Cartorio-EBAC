@@ -128,8 +128,9 @@ int main ()
 		printf ("O que deseja fazer hoje, senhor?\n\n");
 		printf ("\t1 - Registrar nomes\n");
 		printf ("\t2 - Consultar registros\n");
-		printf ("\t3 - Excluir registros\n\n");
-		printf ("Digite sua opção: ");//Fim do menu
+		printf ("\t3 - Excluir registros\n");
+		printf ("\t4 - Sair do sistema\n\n");
+		printf ("Digite o número da sua opção: ");//Fim do menu
 	
 		scanf("%d", &opcao);//Armazenando a escolha do usuário em &opcao (acho que é isso, tenho dúvidas)
 	
@@ -149,6 +150,11 @@ int main ()
 			case 3:
 				deleta();//Chamada de função
 				break;//Encerra esse case
+				
+			case 4:
+				printf("Obrigado por escolher nosso sistema!\n");
+				return 0;
+				break;
 				
 			default://para qualquer resposta invalida (default) envia o printf com mensagem de recysa
 				printf("Opção inválida\n");//mensagem de recusa
