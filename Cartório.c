@@ -113,16 +113,19 @@ int deleta()
 }
 
 int main ()
-{
+	{
 	int opcao=0; //Definindo variaveis
 	int laco=1; //Criando um laço para retornar ao menu principal ao fim de cada ação (registro, consulta, deleta)
-	char senhadigitada [10]="a";
+	char senhadigitada []="a";
+	int comparacao;
 	
 	printf ("\tBem vindo ao seu cartório digital\n\n");
 	printf("Login de administrador!\n\n Digite sua senha: ");
 	scanf("%s", senhadigitada);
 	
-	if(senhadigitada[10] == "admin")
+	comparacao = strcmp(senhadigitada, "admin");
+	if(comparacao == 0)
+	
 	{
 		for(laco=1;laco=1;)
 	
