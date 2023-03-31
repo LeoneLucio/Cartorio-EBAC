@@ -116,55 +116,63 @@ int main ()
 {
 	int opcao=0; //Definindo variaveis
 	int laco=1; //Criando um laço para retornar ao menu principal ao fim de cada ação (registro, consulta, deleta)
+	char senhadigitada [10]="a";
 	
-	for(laco=1;laco=1;)	//SINCERAMENTE EU ME ESQUECI O QUE É ISSO, PODE ME RECORDAR NO FEEDBACK??
-
+	printf ("\tBem vindo ao seu cartório digital\n\n");
+	printf("Login de administrador!\n\n Digite sua senha: ");
+	scanf("%s", senhadigitada);
+	
+	if(senhadigitada[10] == "admin")
 	{
-	setlocale (LC_ALL, "Portuguese");//Definindo linguagem
+		for(laco=1;laco=1;)
 	
-		system("cls"); //Comando para limpar a tela
+		{
+		setlocale (LC_ALL, "Portuguese");//Definindo linguagem
 		
-		printf ("\tBem vindo ao seu cartório digital\n\n");//Ínicio do menu
-		printf ("O que deseja fazer hoje, senhor?\n\n");
-		printf ("\t1 - Registrar nomes\n");
-		printf ("\t2 - Consultar registros\n");
-		printf ("\t3 - Excluir registros\n");
-		printf ("\t4 - Sair do sistema\n\n");
-		printf ("Digite o número da sua opção: ");//Fim do menu
-	
-		scanf("%d", &opcao);//Armazenando a escolha do usuário em &opcao (acho que é isso, tenho dúvidas)
-	
-		system ("cls");//Limpa tela
+			system("cls"); //Comando para limpar a tela
+			
+			printf ("\tBem vindo ao seu cartório digital\n\n");//Ínicio do menu
+			printf ("O que deseja fazer hoje, senhor?\n\n");
+			printf ("\t1 - Registrar nomes\n");
+			printf ("\t2 - Consultar registros\n");
+			printf ("\t3 - Excluir registros\n");
+			printf ("\t4 - Sair do sistema\n\n");
+			printf ("Digite o número da sua opção: ");//Fim do menu
 		
-			switch(opcao)//Inicio da seleção do menu, cada case é um número que o usuário pode digitar para &opcao e assim chamar a função equivalente.
-			{
-							
-			case 1:
-				registro(); //Chamada de função
-				break;//Encerra esse case
-				
-			case 2:
-				consulta();//Chamada de função
-				break;//Encerra esse case
-				
-			case 3:
-				deleta();//Chamada de função
-				break;//Encerra esse case
-				
-			case 4:
-				printf("Obrigado por escolher nosso sistema!\n");
-				return 0;
-				break;
-				
-			default://para qualquer resposta invalida (default) envia o printf com mensagem de recysa
-				printf("Opção inválida\n");//mensagem de recusa
-				system("pause");//Pausa o sistema
-				break;//Encerra a situação
+			scanf("%d", &opcao);//Armazenando a escolha do usuário em &opcao (acho que é isso, tenho dúvidas)
+		
+			system ("cls");//Limpa tela
+			
+				switch(opcao)//Inicio da seleção do menu, cada case é um número que o usuário pode digitar para &opcao e assim chamar a função equivalente.
+				{
+								
+				case 1:
+					registro(); //Chamada de função
+					break;//Encerra esse case
+					
+				case 2:
+					consulta();//Chamada de função
+					break;//Encerra esse case
+					
+				case 3:
+					deleta();//Chamada de função
+					break;//Encerra esse case
+					
+				case 4:
+					printf("Obrigado por escolher nosso sistema!\n");
+					return 0;
+					break;
+					
+				default://para qualquer resposta invalida (default) envia o printf com mensagem de recysa
+					printf("Opção inválida\n");//mensagem de recusa
+					system("pause");//Pausa o sistema
+					break;//Encerra a situação
+			}
 		}
-		}
-	
-	
-} //Fim do laço do for
+	}
+else
+	printf("senha incorreta");	
+} 
 
 
 	
